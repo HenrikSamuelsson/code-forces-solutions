@@ -13,7 +13,7 @@
 #define MIN_WEIGHT    4
 
 /**
- * \brief The melon will be cut into two pieces.
+ * \brief The watermelon will be cut into two pieces.
  */
 #define NUMBER_OF_PIECES    2
 
@@ -25,12 +25,12 @@ int main(void)
 
     if (watermelon_weight < MIN_WEIGHT)
     {
-        /* Melon is too small. */
+        /* Too small watermelon since each piece must weigh at least 2 kg. */
         printf("NO\n");
     }
     else if (watermelon_weight % NUMBER_OF_PIECES != 0)
     {
-        /* The melon does not divide evenly if the remainder is not 0. */
+        /* If not divisible so cannot the weight of both pieces be even. */
         printf("NO\n");
     }
     else
