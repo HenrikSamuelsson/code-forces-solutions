@@ -1,2 +1,3 @@
-# code-forces-solutions
-Solutions to problems from Code Forces.
+# Codeforces Problems Solutions
+
+Solutions to problems from the site [Codeforces](https://codeforces.com/).
