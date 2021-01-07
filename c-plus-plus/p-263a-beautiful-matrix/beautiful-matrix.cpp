@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 
 int main()
 {
@@ -12,11 +13,56 @@ int main()
     for (int l = 0; l < lineCount; l++)
     {
         std::getline(std::cin, line);
-        for (int c = 0; c < colCount; c++)
+        int colIndexTemp = 0; 
+        for (int c = 0; c < line.length(); c++)
         {
-            
+            if (line[c] == '1')
+            {
+                lineIndex = l;
+                colIndex = colIndexTemp;
+            }
+            else if (line[c] == '0')
+            {
+                colIndexTemp++;
+            }
         }
     }
+
+    int moves = 0;
+
+    switch (lineIndex)
+    {
+        case 0:
+        moves += 2;
+        break;
+        case 1:
+        moves += 1;
+        break;
+        case 3:
+        moves += 1;
+        break;
+        case 4:
+        moves += 2;
+        break;
+    }
+
+   switch (colIndex)
+    {
+        case 0:
+        moves += 2;
+        break;
+        case 1:
+        moves += 1;
+        break;
+        case 3:
+        moves += 1;
+        break;
+        case 4:
+        moves += 2;
+        break;
+    }
+
+    std::cout << moves << std::endl;
 
     return 0;
 }
