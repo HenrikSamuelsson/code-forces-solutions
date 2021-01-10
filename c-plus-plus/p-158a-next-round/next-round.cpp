@@ -14,7 +14,7 @@ int main()
     // Get the input about what k and n is in this case.
     std::getline(std::cin, lineBuffer);
     std::stringstream infoDataStream(lineBuffer);
-    infoDataStream >> k >> n;
+    infoDataStream >> n >> k;
     
     // Get the list of scores.
     std::getline(std::cin, lineBuffer);
@@ -26,7 +26,7 @@ int main()
     }
 
     // Find what the K-th place finisher scored.
-    kScore = scoreData[n-1];
+    kScore = scoreData[k-1];
 
     // Count number of participants that scored more than 0 
     // and also scored more or equal to particpant k.
