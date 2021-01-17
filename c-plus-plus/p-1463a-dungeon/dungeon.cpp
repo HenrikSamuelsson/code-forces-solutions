@@ -13,23 +13,20 @@ int main()
     {
         std::cin >> a >> b >> c;
         int totalHealth = a + b + c;
-        while(totalHealth > 0 && a > 0 && b > 0 && c > 0)
-        {
-            totalHealth -= (6 + 3);
-            a -= 1;
-            b -= 1;
-            c -= 1;
-        }
-
-        if (totalHealth == 0)
-        {
-            std::cout << "YES" << std::endl;
-        }
-        else
+        int rounds = totalHealth / 9;
+       
+        if (totalHealth % 9 != 0)
         {
             std::cout << "NO" << std::endl;
         }
-        
+        else if (a < rounds || b < rounds || c < rounds)
+        {
+            std::cout << "NO" << std::endl;
+        }
+        else
+        {
+            std::cout << "YES" << std::endl;
+        }
     }
     return 0;
 }
