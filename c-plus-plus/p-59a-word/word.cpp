@@ -15,8 +15,8 @@ int main()
             lower++;
         }
     }
-
-    if (lower >= line.size()/2)
+    
+    if (2 * lower >= line.size())
     {
         for (auto & c: line) c = tolower(c);
     }
