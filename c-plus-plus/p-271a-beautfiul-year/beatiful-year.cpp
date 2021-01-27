@@ -2,20 +2,27 @@
 
 using namespace std;
 
+bool isBeautiful(int year);
+
 int main()
 {
     int year;
     cin >> year;
-    
+
     for(;;)
     {
         year++;
+        if (isBeautiful(year))
+        {
+            break;
+        }
     }
+    cout << year << endl;
 
     return 0;
 }
 
-bool isBeautiful(int year)    
+bool isBeautiful(int year)
 {
     int digits[4];
     for (int i = 0; i < 4; i++)
@@ -32,7 +39,7 @@ bool isBeautiful(int year)
             {
                 return false;
             }
-        }   
+        }
     }
     return true;
 }
