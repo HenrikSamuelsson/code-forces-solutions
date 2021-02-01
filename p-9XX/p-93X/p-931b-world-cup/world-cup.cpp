@@ -14,7 +14,5 @@ int main()
         r++;
     }
 
-    cout << r;
-
     return 0;
 }
