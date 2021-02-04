@@ -9,17 +9,22 @@ int main()
 
     for (int i = 0; i < t; i++)
     {
-        long n;
+        long long n;
         cin >> n;
         
         bool divisible = false;
-        for (long d = 3; d <= n; d += 2)
+        while(n > 2)
         {
-            if (n % d == 0)
+            if (n % 2 == 0)
+            {
+               n /= 2;
+            }
+            else
             {
                 divisible = true;
                 break;
             }
+            
         }
         if (divisible)
         {
