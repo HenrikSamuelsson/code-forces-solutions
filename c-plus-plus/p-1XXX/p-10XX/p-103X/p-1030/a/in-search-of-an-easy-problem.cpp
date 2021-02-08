@@ -6,8 +6,6 @@ int main()
 
     int t;
     cin >> t;
-    string l;
-    cin >> l;
     bool isEasy = true;
     for (int i = 0; i < t; i++)
     {
