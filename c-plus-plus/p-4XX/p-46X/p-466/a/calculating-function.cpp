@@ -4,23 +4,15 @@ int main()
 {
     using namespace std;
 
-    int n;
+    long long n;
     cin >> n;
-    int sum = 0;
-    bool negative = true;
-    for (int i = 1; i <= n; i++)
+    if (n % 2 == 0)
     {
-        if (negative)
-        {
-            sum -= i;
-            negative = false;
-        }
-        else
-        {
-            sum += i;
-            negative = true;
-        }
+        cout << n / 2 << endl;
     }
-    cout << sum << endl;
+    else
+    {
+        cout << -(1 + n / 2) << endl;
+    }
     return 0;
 }
