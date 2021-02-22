@@ -12,10 +12,13 @@ int main()
         int i = 0;
         int a, b;
         cin >> a >> b;
-        while (0 != a % b)
+        if (0 == a % b)
         {
-            a++;
-            i++;
+            i = 0;
+        }
+        else
+        {
+            i = b - a % b;
         }
         cout << i << endl;
     }
