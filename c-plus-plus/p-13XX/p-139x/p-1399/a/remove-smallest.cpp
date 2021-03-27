@@ -1,5 +1,6 @@
 #include <iostream>
 #include <array>
+#include <algorithm>
 
 int main(void)
 {
@@ -22,8 +23,28 @@ int main(void)
             cin >> a[j];
         }
 
-        // TODO sort the array
+        // Sort the array
+        sort(a, a + s);
 
+        bool solvable = true;
+        for (size_t j = 0; j < s - 1; j++)
+        {
+            if (a[j + 1] - a[j] > 1)
+            {
+                solvable = false;
+                break;
+            }
+        }
+
+        if (solvable)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
+        
         // Clean up
         delete [] a;
     }
