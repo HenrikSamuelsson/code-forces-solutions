@@ -4,21 +4,20 @@
 
 int main(void)
 {
-    // Vector for the values provided as input.
+    // Vector for the values to be provided as input.
     std::vector<int> x;
     
-    // Read in input from the user, should be four positive integers.
+    // Read in input, should be four positive integers.
     const int INPUT_SIZE = 4;
-    
-    int input = 0;
 
     for (size_t i = 0; i < INPUT_SIZE; i++)
     {
+        int input = 0;
         std::cin >> input;
         x.push_back(input);
     }
 
-    // Sort the input from the user from lowest highest.
+    // Sort the input from the user from lowest to highest.
     std::sort(x.begin(), x.end());
 
     // Calculate the values to be deduced.
