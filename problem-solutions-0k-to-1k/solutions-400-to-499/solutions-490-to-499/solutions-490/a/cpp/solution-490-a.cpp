@@ -1,5 +1,5 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 
 int main()
 {
@@ -28,7 +28,7 @@ int main()
             peIndexes.push_back(c);
         }
     }
-    
+
     int min = programmingIndexes.size();
     if (min > mathIndexes.size())
     {
@@ -38,7 +38,7 @@ int main()
     {
         min = peIndexes.size();
     }
-    
+
     if (0 == min)
     {
         std::cout << 0 << std::endl;
