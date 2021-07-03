@@ -22,7 +22,7 @@ int main()
         }
 
         // If even equals n then there must also be n odd numbers
-        // and these can be paired up to have a solution.
+        // and these even and odd numbers can be paired up to have a solution.
         if (even == n)
         {
             std::cout << "Yes" << std::endl;
