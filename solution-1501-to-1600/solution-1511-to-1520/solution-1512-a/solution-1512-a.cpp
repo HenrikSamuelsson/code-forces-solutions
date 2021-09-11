@@ -34,7 +34,7 @@ int solve(testData_t testData);
 int main(void)
 {
     numberOfTestCases = getNumberOfTestCases();
-    for (size_t testCaseCount = 0; testCaseCount < numberOfTestCases; testCount++)
+    for (size_t testCaseCount = 0; testCaseCount < numberOfTestCases; testCaseCount++)
     {
         testData_t testData;
         cin >> testData.length;
@@ -43,6 +43,7 @@ int main(void)
             cin >> testData.array[arrayInputIndex];
         }
         int result = solve(testData);
+        cout << result << "\n";
     }
 
     return EXIT_SUCCESS;
@@ -50,7 +51,32 @@ int main(void)
 
 int solve(testData_t testData)
 {
+    int normal = 0;
 
+    // Check the three first entries to deduce what the normal number is.
+    if (testData.array[0] == testData.array[1])
+    {
+        normal = testData.array[0];
+    }
+    else if (testData.array[0] == testData.array[2])
+    {
+        normal = testData.array[0];
+    }
+    else if (testData.array[1] == testData.array[2])
+    {
+        normal = testData.array[1];
+    }
+
+    // Locate the array entry that differs from the normal number.
+    size_t index = 0;
+    for (index = 0; index < testData.length; index++)
+    {
+        if (testData.array[index] != normal)
+        {
+            break;
+        }
+    }
+    return index + 1;   // Add 1 due to that arrays at codeforces start with 1 and not 0.
 }
 
 //! @brief Get the number of test cases.
